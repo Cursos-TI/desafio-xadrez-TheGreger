@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+void movimentoDoBispo(int indice) {
+    if (indice > 0) {
+        indice--;
+        movimentoDoBispo(indice);
+        printf("Cima\n");
+        printf("Direita\n");
+    }
+}
+
 int main (int argc, char *argv[]) {
 
     // Definindo as constantes de movimento
@@ -13,12 +22,7 @@ int main (int argc, char *argv[]) {
     while (loop) {
         // Implementação de Movimentação do Bispo
         printf("Começando o movimento do Bispo:\n");
-        indice = 1;
-        while (indice <= CINCO) {
-            printf("Cima\n");
-            printf("Direita\n"); 
-            indice++;
-        }
+        movimentoDoBispo(CINCO);
 
         // Implementação de Movimentação da Torre
         printf("Começando o movimento da Torre:\n");
@@ -38,12 +42,14 @@ int main (int argc, char *argv[]) {
         printf("Começando o movimento do Cavalo:\n");
         indice = 0;
         while (indice < 1) {
-            for (int j = 0; j < 1; j++) {
-                for (int i = 0; i < 2; i++) {
+            for (int j = 0, i = 0; j < 2 || i < 1; j++, i++) {
                 printf("Baixo\n");
+                if (i == 1) {
+                    printf("Esquerda\n"); 
+                } else {
+                    continue; 
+                }
             } 
-            printf("Esquerda\n");
-            }
             indice++;
         }
         break;
