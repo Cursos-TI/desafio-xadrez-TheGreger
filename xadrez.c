@@ -19,6 +19,7 @@ int main (int argc, char *argv[]) {
             printf("Direita\n"); 
             indice++;
         }
+
         // Implementação de Movimentação da Torre
         printf("Começando o movimento da Torre:\n");
         indice = 1;
@@ -26,10 +27,24 @@ int main (int argc, char *argv[]) {
             printf("Direita\n"); 
             indice++;
         } while(indice <= CINCO);
+
         // Implementação de Movimentação da Rainha
         printf("Começando o movimento da Rainha:\n");
         for (indice = 1; indice <= OITO; indice++) {
             printf("Esquerda\n");
+        }
+
+        // Implementação de Movimentação do Cavalo
+        printf("Começando o movimento do Cavalo:\n");
+        indice = 0;
+        while (indice < 1) {
+            for (int j = 0; j < 1; j++) {
+                for (int i = 0; i < 2; i++) {
+                printf("Baixo\n");
+            } 
+            printf("Esquerda\n");
+            }
+            indice++;
         }
         break;
     }
